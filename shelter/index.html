@@ -5,9 +5,75 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shelter</title>
-    <script defer type="module" src="./src/main.js"></script>
+    <script defer type="module" src="./main.js"></script>
   </head>
   <body>
-    <div class="wrapper"></div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container container">
+          <div class="logo">
+            <a href="" class="header__title">Cozy House</a>
+            <span class="header__subtitle">Shelter for pets in Boston</span>
+          </div>
+          <nav class="nav">
+            <ul class="nav__menu">
+              <li class="menu__item">
+                <a href="" class="menu__link menu__link_active"
+                  >About the shelter</a
+                >
+              </li>
+              <li class="menu__item">
+                <a href="" class="menu__link">Our pets</a>
+              </li>
+              <li class="menu__item">
+                <a href="" class="menu__link">Help the shelter</a>
+              </li>
+              <li class="menu__item">
+                <a href="" class="menu__link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <footer class="footer" id="footer">
+        <div class="footer__container">
+          <div class="contacts">
+            <h2 class="footer__title">For questions and suggestions</h2>
+            <p>
+              <a class="footer__link" href="mailto:email@shelter.com"
+                ><img src="public/icon-email.svg" alt="" /> email@shelter.com</a
+              >
+            </p>
+            <p>
+              <a class="footer__link" href="tel:+13 674 567 75 54"
+                ><img src="public/icon-phone.svg" alt="" /> +13 674 567 75 54</a
+              >
+            </p>
+          </div>
+          <div class="locations">
+            <h2 class="footer__title">We are waiting for your visit</h2>
+            <p>
+              <a
+                class="footer__link"
+                target="_blank"
+                href="https://goo.gl/maps/s1EiUJRU2Q5vTTG89"
+                ><img src="public/icon-marker.svg" alt="" /> 1 Central Street,
+                Boston (entrance from the store)</a
+              >
+            </p>
+            <p>
+              <a
+                class="footer__link"
+                target="_blank"
+                href="https://goo.gl/maps/6mFBGXfDjzBPDF87A"
+                ><img src="public/icon-marker.svg" alt="" /> 18 South Park,
+                London
+              </a>
+            </p>
+          </div>
+          <div class="footer-puppy"></div>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
