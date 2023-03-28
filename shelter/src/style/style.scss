@@ -267,6 +267,9 @@ h3 {
   }
 
   &_friends {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 261px;
     height: 52px;
     background-color: #f1cdb3;
@@ -477,4 +480,17 @@ h3 {
   &__title {
     color: #fff;
   }
+}
+
+.pets {
+  color: #545454;
+}
+.menu__link_active.pets {
+  color: #292929;
+}
+.header__title.pets {
+  color: #545454;
+}
+.header__subtitle.pets {
+  color: #292929;
 }
