@@ -218,6 +218,9 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 60px;
+    &.pets {
+      gap: 45px;
+    }
   }
 
   &__title {
@@ -286,6 +289,10 @@ h3 {
 .cards {
   display: flex;
   gap: 90px;
+  &.pets {
+    flex-wrap: wrap;
+    gap: 40px 30px;
+  }
 }
 .card {
   width: 270px;
@@ -493,4 +500,38 @@ h3 {
 }
 .header__subtitle.pets {
   color: #292929;
+}
+.slider.pets {
+  justify-content: center;
+}
+
+.pagination {
+  width: 340px;
+  display: flex;
+  justify-content: space-between;
+}
+.btn {
+  &__pagination {
+    width: 52px;
+    height: 52px;
+    border-radius: 100px;
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    border: 2px solid #f1cdb3;
+  }
+  &_inactive {
+    border: 2px solid #cdcdcd;
+    color: #cdcdcd;
+    &.pets {
+      background-color: #f6f6f6;
+    }
+  }
+
+  &_active {
+    background: #f1cdb3;
+  }
 }

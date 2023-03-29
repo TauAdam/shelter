@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="/icons8-cat-footprint-64.png" type="image/x-icon">
 	<link rel="stylesheet" href="index.scss">
 	<title>Pets</title>
 </head>
@@ -13,7 +14,9 @@
 	<header class="header header-pets">
 		<div class="header__container container">
 			<div class="logo">
-				<a href="../index.html" class="header__title pets">Cozy House</a>
+				<a href="../index.html" class="header__title pets">
+					<h1 class='header__title pets'>Cozy House</h1>
+				</a>
 				<span class="header__subtitle pets">Shelter for pets in Boston</span>
 			</div>
 			<nav class="nav">
@@ -22,7 +25,7 @@
 						<a href="../index.html" class="menu__link pets">About the shelter</a>
 					</li>
 					<li class="menu__item">
-						<a href="./src/pets.html" class="menu__link menu__link_active pets">Our pets</a>
+						<a href="" class="menu__link menu__link_active pets">Our pets</a>
 					</li>
 					<li class="menu__item">
 						<a href="../index.html#help" class="menu__link pets">Help the shelter</a>
@@ -36,16 +39,13 @@
 	</header>
 	<main>
 		<section class="friends" id="friends">
-			<div class="friends__container container">
+			<div class="friends__container pe container">
 				<h3 class="friends__title">
 					Our friends who <br>
 					are looking for a house
 				</h3>
-				<div class="slider">
-					<button class="btn btn_left">
-						<img src="/Arrow.svg" alt="Arrow">
-					</button>
-					<div class="cards">
+				<div class="slider pets">
+					<div class="cards pets">
 						<div class="card">
 							<img src="/pets-katrine.png" alt="pets-katrine" class="card__img">
 							<p class="card__title">Katrine</p>
@@ -61,12 +61,37 @@
 							<p class="card__title">Woody</p>
 							<button class="btn btn_card">Learn more</button>
 						</div>
+						<div class="card">
+							<img src="/pets-sophia.png" alt="pets-Sophia" class="card__img">
+							<p class="card__title">Sophia</p>
+							<button class="btn btn_card">Learn more</button>
+						</div>
+						<div class="card">
+							<img src="/pets-timmy.png" alt="pets-Timmy" class="card__img">
+							<p class="card__title">Timmy</p>
+							<button class="btn btn_card">Learn more</button>
+						</div>
+						<div class="card">
+							<img src="/pets-charly.png" alt="pets-Charly" class="card__img">
+							<p class="card__title">Charly</p>
+							<button class="btn btn_card">Learn more</button>
+						</div>
+						<div class="card">
+							<img src="/pets-scarlet.png" alt="pets-Scarlett" class="card__img">
+							<p class="card__title">Scarlett</p>
+							<button class="btn btn_card">Learn more</button>
+						</div>
+						<div class="card">
+							<img src="/pets-fredie.png" alt="pets-Freddie" class="card__img">
+							<p class="card__title">Freddie</p>
+							<button class="btn btn_card">Learn more</button>
+						</div>
 					</div>
-					<button class="btn btn_right">
-						<img src="/Arrow.svg" alt="Arrow">
-					</button>
 				</div>
-				<a href='./src/pets.html' class="btn btn_friends">Get to know the rest</a>
+				<div class="pagination"><button class="btn btn__pagination btn_inactive pets">
+						&lt;&lt;</button><button class="btn btn__pagination btn_inactive pets">&lt;</button><button
+						class="btn btn__pagination btn_active">1</button><button class="btn btn__pagination">&gt;</button><button
+						class="btn btn__pagination">&gt;&gt;</button></div>
 			</div>
 		</section>
 	</main>
@@ -80,7 +105,7 @@
 					<span>+13 674 567 75 54</span></a>
 			</div>
 			<div class="locations">
-				<h3 class="footer__title">We are waiting for your visit</h3>
+				<h3 class="footer__title">We are waiting <br> for your visit</h3>
 				<a class="footer__link" target="_blank" href="https://goo.gl/maps/s1EiUJRU2Q5vTTG89"><img src="/icon-marker.svg"
 						alt="icon">
 					<span>1 Central Street, Boston (entrance from the store)</span></a>
