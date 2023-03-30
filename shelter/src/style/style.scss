@@ -49,12 +49,13 @@ h3 {
   color: #545454;
 }
 .header {
+  padding: 30px 0 90px;
   &.pets {
-    height: 120px;
+    padding: 30px 0 30px;
   }
 }
 .header__container {
-  padding: 30px 0 90px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,7 +69,9 @@ h3 {
 }
 .logo {
 }
+
 .header__title {
+  padding-bottom: 5px;
   font-family: 'Georgia';
   font-style: normal;
   font-weight: 400;
@@ -239,6 +242,9 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .pets {
+    padding: 15px 0;
+  }
 }
 .btn {
   &_left {
@@ -297,7 +303,7 @@ h3 {
   gap: 90px;
   &.pets {
     flex-wrap: wrap;
-    gap: 40px 30px;
+    gap: 30px 40px;
   }
 }
 .card {
@@ -334,6 +340,7 @@ h3 {
 
 // -----------HELP
 .help {
+  height: 611px;
   background-color: #fff;
   &__container {
     padding: 80px 0 100px;
@@ -361,7 +368,7 @@ h3 {
   &__item {
   }
   &__item-icon {
-    padding-bottom: 30px;
+    padding-bottom: 25px;
   }
   &__item-text {
     font-family: 'Georgia';
@@ -383,7 +390,7 @@ h3 {
     width: 915px;
     padding: 80px 0 100px;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
   }
 
@@ -392,6 +399,7 @@ h3 {
   }
 
   &__content {
+    padding-left: 30px;
     width: 380px;
     display: flex;
     flex-direction: column;
@@ -464,14 +472,13 @@ h3 {
   &__link {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 18px;
     font-family: 'Georgia';
     font-size: 20px;
     line-height: 115%;
     letter-spacing: 0.06em;
     color: #f1cdb3;
     transition: all 0.3s linear;
-    text-align: right;
     &:hover {
       color: #fcf0e8;
     }
@@ -501,14 +508,9 @@ h3 {
 .menu__link_active.pets {
   color: #292929;
 }
-.header__title.pets {
-  color: #545454;
-}
+
 .header__subtitle.pets {
   color: #292929;
-}
-.slider.pets {
-  justify-content: center;
 }
 
 .pagination {
