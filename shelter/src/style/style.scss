@@ -60,7 +60,7 @@ h3 {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  @media (max-width: 770px) {
+  @media (max-width: $tablet) {
     max-width: 708px;
   }
 }
@@ -129,6 +129,11 @@ h3 {
   padding-top: 60px;
   display: flex;
   justify-content: space-between;
+  @media (max-width: $tablet) {
+    padding-top: 30px;
+    flex-direction: column;
+    gap: 100px;
+  }
 }
 .start__content {
   padding-top: 163px;
@@ -136,6 +141,11 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 42px;
+  @media (max-width: $tablet) {
+    padding-top: 0;
+    align-self: center;
+    align-items: center;
+  }
 }
 .start__heading {
   font-family: 'Georgia';
@@ -146,6 +156,7 @@ h3 {
   display: flex;
   align-items: center;
   color: #ffffff;
+  align-self: flex-start;
 }
 .start__subheading {
   font-family: 'Arial';
@@ -184,6 +195,11 @@ h3 {
   color: #292929;
 }
 .start__img {
+  align-self: flex-end;
+  @media (max-width: $tablet) {
+    max-width: 569px;
+    max-height: 593px;
+  }
 }
 
 //--------ABOUT-----------
@@ -195,6 +211,10 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: $tablet) {
+    flex-direction: column-reverse;
+    gap: 80px;
+  }
 }
 
 .about__img {
@@ -242,7 +262,11 @@ h3 {
   justify-content: space-between;
   align-items: center;
   .pets {
+    overflow: hidden;
     padding: 15px 0;
+    @media (max-width: $tablet) {
+      max-width: 1365px;
+    }
   }
 }
 .btn {
@@ -300,6 +324,11 @@ h3 {
 .cards {
   display: flex;
   gap: 90px;
+  overflow: hidden;
+  @media (max-width: $tablet) {
+    width: 581px;
+    gap: 40px;
+  }
   &.pets {
     flex-wrap: wrap;
     gap: 30px 40px;
@@ -339,7 +368,7 @@ h3 {
 
 // -----------HELP
 .help {
-  height: 611px;
+  min-height: 611px;
   background-color: #fff;
   &__container {
     padding: 80px 0 100px;
@@ -360,6 +389,16 @@ h3 {
     flex-wrap: wrap;
     gap: 55px 120px;
     justify-content: center;
+    @media (max-width: $tablet) {
+      padding: 0;
+      display: grid;
+      text-align: center;
+      grid-template-columns: repeat(3, 170px);
+      grid-template-rows: repeat(3, 113px);
+      gap: 55px 60px;
+      width: 630px;
+      height: 449px;
+    }
   }
 }
 
@@ -367,7 +406,7 @@ h3 {
   &__item {
   }
   &__item-icon {
-    padding-bottom: 25px;
+    padding-bottom: 23px;
   }
   &__item-text {
     font-family: 'Georgia';
@@ -375,9 +414,6 @@ h3 {
     font-weight: 400;
     font-size: 20px;
     line-height: 115%;
-    display: flex;
-    align-items: center;
-    text-align: center;
     letter-spacing: 0.06em;
     color: #545454;
   }
@@ -390,6 +426,11 @@ h3 {
     padding: 80px 0 98px;
     display: flex;
     align-items: center;
+    gap: 30px;
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+      gap: 60px;
+    }
   }
 
   &__img {
@@ -397,7 +438,6 @@ h3 {
   }
 
   &__content {
-    padding-left: 30px;
     width: 380px;
     display: flex;
     flex-direction: column;
@@ -461,11 +501,26 @@ h3 {
     padding-top: 40px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    @media (max-width: $tablet) {
+      padding-top: 30px;
+      flex-direction: column;
+      gap: 65px;
+      align-items: center;
+    }
+  }
+  &__content {
+    display: flex;
+    gap: 160px;
+    padding-top: 16px;
+    @media (max-width: $tablet) {
+      padding: 0;
+      gap: 60px;
+    }
   }
   &-puppy {
-    width: 300px;
-    height: 310px;
-    background-image: url('/footer-puppy.png');
+    max-width: 100%;
+    height: auto;
   }
   &__link {
     display: flex;
@@ -485,7 +540,6 @@ h3 {
   .locations {
     display: flex;
     flex-direction: column;
-    padding-top: 16px;
   }
   .contacts {
     width: 278px;
