@@ -47,6 +47,10 @@ h3 {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #545454;
+  @media (max-width: $small) {
+    text-align: center;
+    font-size: 25px;
+  }
 }
 .header {
   padding: 30px 0 30px;
@@ -56,12 +60,24 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: $mobile) {
+    padding: 0 10px;
+  }
 }
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  @media (min-width: #{$tablet + 1}) and (max-width: $laptop) {
+    padding: 20px;
+  }
+  @media (min-width: #{$mobile + 1}) and (max-width: $small) {
+    padding: 10px;
+  }
   @media (max-width: $tablet) {
     max-width: 708px;
+  }
+  @media (max-width: $mobile) {
+    max-width: 300px;
   }
 }
 .logo {
@@ -129,10 +145,16 @@ h3 {
   padding-top: 60px;
   display: flex;
   justify-content: space-between;
+  @media (min-width: #{$tablet + 1}) and (max-width: $laptop) {
+    flex-direction: column;
+  }
   @media (max-width: $tablet) {
     padding-top: 30px;
     flex-direction: column;
     gap: 100px;
+  }
+  @media (max-width: $small) {
+    gap: 105px;
   }
 }
 .start__content {
@@ -146,6 +168,12 @@ h3 {
     align-self: center;
     align-items: center;
   }
+  @media (max-width: $small) {
+    max-width: 300px;
+    max-height: 296px;
+    text-align: center;
+    align-items: center;
+  }
 }
 .start__heading {
   font-family: 'Georgia';
@@ -154,9 +182,12 @@ h3 {
   font-size: 44px;
   line-height: 130%;
   display: flex;
-  align-items: center;
   color: #ffffff;
   align-self: flex-start;
+  @media (max-width: $small) {
+    font-size: 25px;
+    align-self: center;
+  }
 }
 .start__subheading {
   font-family: 'Arial';
@@ -200,6 +231,10 @@ h3 {
     max-width: 569px;
     max-height: 593px;
   }
+  @media (max-width: $small) {
+    max-width: 260px;
+    max-height: 271.77px;
+  }
 }
 
 //--------ABOUT-----------
@@ -215,9 +250,17 @@ h3 {
     flex-direction: column-reverse;
     gap: 80px;
   }
+  @media (max-width: $small) {
+    padding: 42px 0;
+    gap: 42px;
+  }
 }
 
 .about__img {
+  height: auto;
+  @media (max-width: $small) {
+    width: 260px;
+  }
 }
 .about__content {
   width: 430px;
@@ -225,6 +268,10 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: $small) {
+    width: 270px;
+    height: 494px;
+  }
 }
 .about__heading {
 }
@@ -235,6 +282,9 @@ h3 {
   font-size: 15px;
   line-height: 160%;
   color: #4c4c4c;
+  @media (max-width: $small) {
+    text-align: justify;
+  }
 }
 //-----FRIENDS
 .friends {
@@ -245,6 +295,10 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 60px;
+    @media (max-width: $small) {
+      padding: 42px 0;
+      gap: 42px;
+    }
     &.pets {
       gap: 45px;
       padding: 80px 0 98px;
@@ -261,12 +315,17 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   .pets {
     overflow: hidden;
     padding: 15px 0;
     @media (max-width: $tablet) {
       max-width: 1365px;
     }
+  }
+  @media (max-width: $small) {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }
 .btn {
@@ -278,6 +337,12 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: $small) {
+      order: 1;
+      // position: absolute;
+      // bottom: 0;
+      // left: 43px;
+    }
   }
   &_right {
     width: 52px;
@@ -288,6 +353,9 @@ h3 {
     justify-content: center;
     align-items: center;
     transform: rotate(180deg);
+    @media (max-width: $small) {
+      order: 1;
+    }
   }
 
   &_card {
@@ -329,6 +397,10 @@ h3 {
     width: 581px;
     gap: 40px;
   }
+  @media (max-width: $small) {
+    margin-bottom: 20px;
+    justify-content: center;
+  }
   &.pets {
     flex-wrap: wrap;
     gap: 30px 40px;
@@ -364,6 +436,16 @@ h3 {
     letter-spacing: 0.06em;
     color: #545454;
   }
+  @media (max-width: $laptop) {
+    &:nth-child(3) {
+      display: none;
+    }
+  }
+  @media (max-width: $small) {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
 }
 
 // -----------HELP
@@ -377,6 +459,10 @@ h3 {
     gap: 60px;
     align-items: center;
     text-align: center;
+    @media (max-width: $small) {
+      padding: 42px 0;
+      gap: 42px;
+    }
   }
 
   &__title {
@@ -396,17 +482,28 @@ h3 {
       grid-template-columns: repeat(3, 170px);
       grid-template-rows: repeat(3, 113px);
       gap: 55px 60px;
-      width: 630px;
-      height: 449px;
+    }
+    @media (max-width: $small) {
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      gap: 30px;
     }
   }
 }
 
 .list {
   &__item {
+    @media (max-width: $small) {
+      width: 130px;
+      height: 87px;
+    }
   }
   &__item-icon {
     padding-bottom: 23px;
+    @media (max-width: $small) {
+      padding-bottom: 15px;
+      max-width: 50px;
+    }
   }
   &__item-text {
     font-family: 'Georgia';
@@ -416,25 +513,39 @@ h3 {
     line-height: 115%;
     letter-spacing: 0.06em;
     color: #545454;
+    @media (max-width: $small) {
+      font-size: 15px;
+      line-height: 110%;
+    }
   }
 }
 //-----DONATION-----------
 .donation {
   background-color: #f6f6f6;
   &__container {
-    width: 915px;
     padding: 80px 0 98px;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 30px;
+    @media (min-width: #{$tablet + 1}) and (max-width: $laptop) {
+      flex-direction: column-reverse;
+    }
     @media (max-width: $tablet) {
       flex-direction: column-reverse;
       gap: 60px;
+    }
+    @media (max-width: $small) {
+      padding: 42px 0;
+      gap: 42px;
     }
   }
 
   &__img {
     height: 100%;
+    @media (max-width: $small) {
+      max-width: 260px;
+    }
   }
 
   &__content {
@@ -442,6 +553,12 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @media (max-width: $small) {
+      align-items: center;
+      max-width: 300px;
+      height: 281px;
+      justify-content: space-between;
+    }
   }
 
   &__title {
@@ -472,6 +589,9 @@ h3 {
   justify-content: space-between;
   background-color: #f1cdb3;
   border-radius: 9px;
+  @media (max-width: $small) {
+    width: 281px;
+  }
   &__img {
   }
 
@@ -485,6 +605,10 @@ h3 {
     align-items: center;
     letter-spacing: 0.06em;
     color: #545454;
+    @media (max-width: $small) {
+      font-size: 15px;
+      line-height: 110%;
+    }
   }
   &:hover {
     background-color: #fddcc4;
@@ -508,6 +632,9 @@ h3 {
       gap: 65px;
       align-items: center;
     }
+    @media (max-width: $small) {
+      gap: 40px;
+    }
   }
   &__content {
     display: flex;
@@ -517,10 +644,18 @@ h3 {
       padding: 0;
       gap: 60px;
     }
+    @media (max-width: $small) {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
   }
   &-puppy {
     max-width: 100%;
     height: auto;
+    @media (max-width: $small) {
+      max-width: 260px;
+    }
   }
   &__link {
     display: flex;
@@ -544,10 +679,17 @@ h3 {
   .contacts {
     width: 278px;
     gap: 40px;
+    @media (max-width: $small) {
+      align-items: center;
+    }
   }
   .locations {
     width: 302px;
     gap: 32px;
+    @media (max-width: $small) {
+      width: 300px;
+      gap: 40px;
+    }
   }
   &__title {
     color: #fff;
@@ -593,5 +735,29 @@ h3 {
 
   &_active {
     background: #f1cdb3;
+  }
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+}
+.bar {
+  width: 100%;
+  height: 2px;
+  background-color: #f1cdb3;
+  transition: 0.3s;
+}
+
+@media (max-width: #{$tablet - 1}) {
+  .nav {
+    display: none;
+  }
+  .burger {
+    display: flex;
   }
 }
