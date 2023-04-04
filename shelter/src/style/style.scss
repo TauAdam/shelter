@@ -246,7 +246,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media (max-width: $tablet) {
+  @media (max-width: $laptop) {
     flex-direction: column-reverse;
     gap: 80px;
   }
@@ -306,6 +306,10 @@ h3 {
         padding-bottom: 75px;
         gap: 0;
       }
+      @media (max-width: $small) {
+        padding: 42px 0;
+        gap: 0;
+      }
     }
   }
 
@@ -313,7 +317,13 @@ h3 {
     text-align: center;
   }
 }
-
+@media (max-width: $small) {
+  .friends__container.pets {
+    .friends__title {
+      margin-bottom: 42px;
+    }
+  }
+}
 .slider {
   width: 100%;
   display: flex;
@@ -326,6 +336,10 @@ h3 {
     @media (max-width: $laptop) {
       padding: 30px 0 40px;
       justify-content: center;
+    }
+    @media (max-width: $small) {
+      padding: 0;
+      margin-bottom: 20px;
     }
   }
   @media (max-width: $small) {
@@ -441,12 +455,6 @@ h3 {
     letter-spacing: 0.06em;
     color: #545454;
   }
-
-  @media (max-width: $small) {
-    &:nth-child(2) {
-      display: none;
-    }
-  }
 }
 @media (max-width: $laptop) {
   .cards {
@@ -460,6 +468,26 @@ h3 {
     }
     &:not(.pets) {
       .card:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: $small) {
+  .cards {
+    &:not(.pets) {
+      .card:nth-child(2) {
+        display: none;
+      }
+    }
+    &.pets {
+      .card:nth-child(4) {
+        display: none;
+      }
+      .card:nth-child(5) {
+        display: none;
+      }
+      .card:nth-child(6) {
         display: none;
       }
     }
@@ -703,6 +731,9 @@ h3 {
   .locations {
     width: 302px;
     gap: 32px;
+    .footer__title {
+      width: 270px;
+    }
     @media (max-width: $small) {
       width: 300px;
       gap: 40px;
@@ -728,6 +759,9 @@ h3 {
   width: 340px;
   display: flex;
   justify-content: space-between;
+  @media (max-width: $small) {
+    width: 300px;
+  }
 }
 .btn {
   &__pagination {
