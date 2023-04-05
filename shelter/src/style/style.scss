@@ -503,7 +503,6 @@ h3 {
     flex-direction: column;
     gap: 60px;
     align-items: center;
-    text-align: center;
     @media (max-width: $small) {
       padding: 42px 0;
       gap: 42px;
@@ -515,7 +514,7 @@ h3 {
   }
 
   &__list {
-    padding: 0 87px;
+    // padding: 0 87px;
     display: flex;
     flex-wrap: wrap;
     gap: 55px 120px;
@@ -538,20 +537,23 @@ h3 {
 
 .list {
   &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @media (max-width: $small) {
       width: 130px;
       height: 87px;
     }
   }
   &__item-icon {
-    padding-bottom: 23px;
+    padding-bottom: 30px;
     @media (max-width: $small) {
-      padding-bottom: 15px;
+      padding-bottom: 20px;
       max-width: 50px;
     }
   }
   &__item-text {
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -600,7 +602,7 @@ h3 {
     gap: 20px;
     @media (max-width: $small) {
       align-items: center;
-      max-width: 300px;
+      max-width: 100%;
       height: 281px;
       justify-content: space-between;
     }
@@ -617,6 +619,9 @@ h3 {
     line-height: 110%;
     letter-spacing: 0.06em;
     color: #545454;
+    @media (max-width: $small) {
+      letter-spacing: 0;
+    }
   }
 }
 .donation__desc {
@@ -626,6 +631,10 @@ h3 {
   font-size: 12px;
   line-height: 1.5;
   color: #b2b2b2;
+  @media (max-width: $small) {
+    max-width: 280px;
+    text-align: justify;
+  }
 }
 .credit-card {
   width: 349px;
@@ -720,19 +729,22 @@ h3 {
   .locations {
     display: flex;
     flex-direction: column;
-  }
-  .contacts {
-    width: 278px;
-    gap: 40px;
     @media (max-width: $small) {
       align-items: center;
     }
+  }
+  .contacts {
+    width: 280px;
+    gap: 40px;
   }
   .locations {
     width: 302px;
     gap: 32px;
     .footer__title {
       width: 270px;
+    }
+    & > .footer__link:last-child {
+      align-self: flex-start;
     }
     @media (max-width: $small) {
       width: 300px;
