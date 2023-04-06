@@ -47,25 +47,38 @@ h3 {
   line-height: 130%;
   letter-spacing: 0.06em;
   color: #545454;
+  @media (max-width: $small) {
+    text-align: center;
+    font-size: 25px;
+  }
 }
 .header {
-  padding: 30px 0 90px;
-  &.pets {
-    padding: 30px 0 30px;
-  }
+  padding: 30px 0 30px;
 }
 .header__container {
   height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  &.pets {
-    padding: 30px 0 30px;
+  @media (max-width: $mobile) {
+    padding: 0 10px;
   }
 }
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  @media (min-width: #{$tablet + 1}) and (max-width: $laptop) {
+    padding: 20px;
+  }
+  @media (min-width: #{$mobile + 1}) and (max-width: $small) {
+    padding: 10px;
+  }
+  @media (max-width: $tablet) {
+    max-width: 708px;
+  }
+  @media (max-width: $mobile) {
+    max-width: 300px;
+  }
 }
 .logo {
 }
@@ -129,8 +142,20 @@ h3 {
 .start {
 }
 .start__container {
+  padding-top: 60px;
   display: flex;
   justify-content: space-between;
+  @media (min-width: #{$tablet + 1}) and (max-width: $laptop) {
+    flex-direction: column;
+  }
+  @media (max-width: $tablet) {
+    padding-top: 30px;
+    flex-direction: column;
+    gap: 100px;
+  }
+  @media (max-width: $small) {
+    gap: 105px;
+  }
 }
 .start__content {
   padding-top: 163px;
@@ -138,6 +163,17 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 42px;
+  @media (max-width: $tablet) {
+    padding-top: 0;
+    align-self: center;
+    align-items: center;
+  }
+  @media (max-width: $small) {
+    max-width: 300px;
+    max-height: 296px;
+    text-align: center;
+    align-items: center;
+  }
 }
 .start__heading {
   font-family: 'Georgia';
@@ -146,8 +182,12 @@ h3 {
   font-size: 44px;
   line-height: 130%;
   display: flex;
-  align-items: center;
   color: #ffffff;
+  align-self: flex-start;
+  @media (max-width: $small) {
+    font-size: 25px;
+    align-self: center;
+  }
 }
 .start__subheading {
   font-family: 'Arial';
@@ -186,6 +226,15 @@ h3 {
   color: #292929;
 }
 .start__img {
+  align-self: flex-end;
+  @media (max-width: $tablet) {
+    max-width: 569px;
+    max-height: 593px;
+  }
+  @media (max-width: $small) {
+    max-width: 260px;
+    max-height: 271.77px;
+  }
 }
 
 //--------ABOUT-----------
@@ -197,9 +246,21 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: $laptop) {
+    flex-direction: column-reverse;
+    gap: 80px;
+  }
+  @media (max-width: $small) {
+    padding: 42px 0;
+    gap: 42px;
+  }
 }
 
 .about__img {
+  height: auto;
+  @media (max-width: $small) {
+    width: 260px;
+  }
 }
 .about__content {
   width: 430px;
@@ -207,6 +268,10 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media (max-width: $small) {
+    width: 270px;
+    height: 494px;
+  }
 }
 .about__heading {
 }
@@ -217,6 +282,9 @@ h3 {
   font-size: 15px;
   line-height: 160%;
   color: #4c4c4c;
+  @media (max-width: $small) {
+    text-align: justify;
+  }
 }
 //-----FRIENDS
 .friends {
@@ -227,8 +295,21 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 60px;
+    @media (max-width: $small) {
+      padding: 42px 0;
+      gap: 42px;
+    }
     &.pets {
       gap: 45px;
+      padding: 80px 0 98px;
+      @media (max-width: $laptop) {
+        padding-bottom: 75px;
+        gap: 0;
+      }
+      @media (max-width: $small) {
+        padding: 42px 0;
+        gap: 0;
+      }
     }
   }
 
@@ -236,14 +317,34 @@ h3 {
     text-align: center;
   }
 }
-
+@media (max-width: $small) {
+  .friends__container.pets {
+    .friends__title {
+      margin-bottom: 42px;
+    }
+  }
+}
 .slider {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  .pets {
+  position: relative;
+  &.pets {
+    overflow: hidden;
     padding: 15px 0;
+    @media (max-width: $laptop) {
+      padding: 30px 0 40px;
+      justify-content: center;
+    }
+    @media (max-width: $small) {
+      padding: 0;
+      margin-bottom: 20px;
+    }
+  }
+  @media (max-width: $small) {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }
 .btn {
@@ -255,6 +356,12 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: $small) {
+      order: 1;
+      // position: absolute;
+      // bottom: 0;
+      // left: 43px;
+    }
   }
   &_right {
     width: 52px;
@@ -265,6 +372,9 @@ h3 {
     justify-content: center;
     align-items: center;
     transform: rotate(180deg);
+    @media (max-width: $small) {
+      order: 1;
+    }
   }
 
   &_card {
@@ -301,6 +411,15 @@ h3 {
 .cards {
   display: flex;
   gap: 90px;
+  overflow: hidden;
+  @media (max-width: $tablet) {
+    width: 581px;
+    gap: 40px;
+  }
+  @media (max-width: $small) {
+    margin-bottom: 20px;
+    justify-content: center;
+  }
   &.pets {
     flex-wrap: wrap;
     gap: 30px 40px;
@@ -337,10 +456,46 @@ h3 {
     color: #545454;
   }
 }
-
+@media (max-width: $laptop) {
+  .cards {
+    &.pets {
+      .card:nth-child(7) {
+        display: none;
+      }
+      .card:nth-child(8) {
+        display: none;
+      }
+    }
+    &:not(.pets) {
+      .card:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: $small) {
+  .cards {
+    &:not(.pets) {
+      .card:nth-child(2) {
+        display: none;
+      }
+    }
+    &.pets {
+      .card:nth-child(4) {
+        display: none;
+      }
+      .card:nth-child(5) {
+        display: none;
+      }
+      .card:nth-child(6) {
+        display: none;
+      }
+    }
+  }
+}
 // -----------HELP
 .help {
-  height: 611px;
+  min-height: 611px;
   background-color: #fff;
   &__container {
     padding: 80px 0 100px;
@@ -348,7 +503,10 @@ h3 {
     flex-direction: column;
     gap: 60px;
     align-items: center;
-    text-align: center;
+    @media (max-width: $small) {
+      padding: 42px 0;
+      gap: 42px;
+    }
   }
 
   &__title {
@@ -356,54 +514,98 @@ h3 {
   }
 
   &__list {
-    padding: 0 87px;
+    // padding: 0 87px;
     display: flex;
     flex-wrap: wrap;
     gap: 55px 120px;
     justify-content: center;
+    @media (max-width: $tablet) {
+      padding: 0;
+      display: grid;
+      text-align: center;
+      grid-template-columns: repeat(3, 170px);
+      grid-template-rows: repeat(3, 113px);
+      gap: 55px 60px;
+    }
+    @media (max-width: $small) {
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      gap: 30px;
+    }
   }
 }
 
 .list {
   &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: $small) {
+      width: 130px;
+      height: 87px;
+    }
   }
   &__item-icon {
-    padding-bottom: 25px;
+    padding-bottom: 30px;
+    @media (max-width: $small) {
+      padding-bottom: 20px;
+      max-width: 50px;
+    }
   }
   &__item-text {
-    font-family: 'Georgia';
+    font-family: 'Georgia', serif;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 115%;
-    display: flex;
-    align-items: center;
-    text-align: center;
     letter-spacing: 0.06em;
     color: #545454;
+    @media (max-width: $small) {
+      font-size: 15px;
+      line-height: 110%;
+    }
   }
 }
 //-----DONATION-----------
 .donation {
   background-color: #f6f6f6;
   &__container {
-    width: 915px;
-    padding: 80px 0 100px;
+    padding: 80px 0 98px;
     display: flex;
-    // justify-content: space-between;
     align-items: center;
+    justify-content: center;
+    gap: 30px;
+    @media (min-width: #{$tablet + 1}) and (max-width: $laptop) {
+      flex-direction: column-reverse;
+    }
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+      gap: 60px;
+    }
+    @media (max-width: $small) {
+      padding: 42px 0;
+      gap: 42px;
+    }
   }
 
   &__img {
     height: 100%;
+    @media (max-width: $small) {
+      max-width: 260px;
+    }
   }
 
   &__content {
-    padding-left: 30px;
     width: 380px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @media (max-width: $small) {
+      align-items: center;
+      max-width: 100%;
+      height: 281px;
+      justify-content: space-between;
+    }
   }
 
   &__title {
@@ -417,6 +619,9 @@ h3 {
     line-height: 110%;
     letter-spacing: 0.06em;
     color: #545454;
+    @media (max-width: $small) {
+      letter-spacing: 0;
+    }
   }
 }
 .donation__desc {
@@ -426,6 +631,10 @@ h3 {
   font-size: 12px;
   line-height: 1.5;
   color: #b2b2b2;
+  @media (max-width: $small) {
+    max-width: 280px;
+    text-align: justify;
+  }
 }
 .credit-card {
   width: 349px;
@@ -434,6 +643,9 @@ h3 {
   justify-content: space-between;
   background-color: #f1cdb3;
   border-radius: 9px;
+  @media (max-width: $small) {
+    width: 281px;
+  }
   &__img {
   }
 
@@ -447,6 +659,10 @@ h3 {
     align-items: center;
     letter-spacing: 0.06em;
     color: #545454;
+    @media (max-width: $small) {
+      font-size: 15px;
+      line-height: 110%;
+    }
   }
   &:hover {
     background-color: #fddcc4;
@@ -463,11 +679,37 @@ h3 {
     padding-top: 40px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    @media (max-width: $tablet) {
+      padding-top: 30px;
+      flex-direction: column;
+      gap: 65px;
+      align-items: center;
+    }
+    @media (max-width: $small) {
+      gap: 40px;
+    }
+  }
+  &__content {
+    display: flex;
+    gap: 160px;
+    padding-top: 16px;
+    @media (max-width: $tablet) {
+      padding: 0;
+      gap: 60px;
+    }
+    @media (max-width: $small) {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
   }
   &-puppy {
-    width: 300px;
-    height: 310px;
-    background-image: url('/footer-puppy.png');
+    max-width: 100%;
+    height: auto;
+    @media (max-width: $small) {
+      max-width: 260px;
+    }
   }
   &__link {
     display: flex;
@@ -487,15 +729,27 @@ h3 {
   .locations {
     display: flex;
     flex-direction: column;
-    padding-top: 16px;
+    @media (max-width: $small) {
+      align-items: center;
+    }
   }
   .contacts {
-    width: 278px;
+    width: 280px;
     gap: 40px;
   }
   .locations {
     width: 302px;
     gap: 32px;
+    .footer__title {
+      width: 270px;
+    }
+    & > .footer__link:last-child {
+      align-self: flex-start;
+    }
+    @media (max-width: $small) {
+      width: 300px;
+      gap: 40px;
+    }
   }
   &__title {
     color: #fff;
@@ -517,6 +771,9 @@ h3 {
   width: 340px;
   display: flex;
   justify-content: space-between;
+  @media (max-width: $small) {
+    width: 300px;
+  }
 }
 .btn {
   &__pagination {
@@ -541,5 +798,34 @@ h3 {
 
   &_active {
     background: #f1cdb3;
+  }
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  &.pets {
+    > .bar {
+      background-color: #000;
+    }
+  }
+}
+.bar {
+  width: 100%;
+  height: 2px;
+  background-color: #f1cdb3;
+  transition: 0.3s;
+}
+
+@media (max-width: #{$tablet - 1}) {
+  .nav {
+    display: none;
+  }
+  .burger {
+    display: flex;
   }
 }
